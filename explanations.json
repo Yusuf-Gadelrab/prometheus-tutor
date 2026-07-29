@@ -1,0 +1,126 @@
+{
+  "variables": {
+    "en": "A variable is a name that points to a value stored in memory, e.g. `x = 5` makes `x` refer to 5. It's the foundation everything else builds on.",
+    "ar": "المتغير هو اسم يشير إلى قيمة مخزنة في الذاكرة، مثل `x = 5` حيث يشير `x` إلى القيمة 5. هو الأساس الذي يُبنى عليه كل شيء آخر."
+  },
+  "data_types": {
+    "en": "Data types (int, float, str, bool, list, dict...) tell Python what kind of value a variable holds and what operations are valid on it.",
+    "ar": "أنواع البيانات (int, float, str, bool, list, dict...) تخبر بايثون بنوع القيمة التي يحملها المتغير والعمليات المسموح بها عليها."
+  },
+  "operators": {
+    "en": "Operators (+, -, *, /, ==, <, >) combine or compare values. Arithmetic operators compute; comparison operators produce True/False.",
+    "ar": "المعاملات (+, -, *, /, ==, <, >) تجمع أو تقارن القيم. المعاملات الحسابية تحسب، ومعاملات المقارنة تنتج True أو False."
+  },
+  "input_output": {
+    "en": "`input()` reads text from the user; `print()` displays output. Together they let a program talk to a person.",
+    "ar": "`input()` تقرأ نصاً من المستخدم، و`print()` تعرض المخرجات. معاً تتيحان للبرنامج التواصل مع الشخص."
+  },
+  "boolean_logic": {
+    "en": "Boolean logic combines True/False values with `and`, `or`, `not`. `and` needs both true, `or` needs at least one, `not` flips the value.",
+    "ar": "المنطق البولياني يجمع قيم True/False باستخدام `and` و`or` و`not`. `and` تحتاج أن يكون الاثنان صحيحين، `or` تحتاج واحداً على الأقل، و`not` تعكس القيمة."
+  },
+  "conditionals": {
+    "en": "`if`/`elif`/`else` runs different code depending on whether a boolean condition is true, letting a program branch based on data.",
+    "ar": "`if`/`elif`/`else` تنفذ كوداً مختلفاً حسب صحة شرط بولياني، مما يسمح للبرنامج بالتفرع حسب البيانات."
+  },
+  "loops_while": {
+    "en": "A `while` loop repeats its body as long as a condition stays true. You must update something inside it or it may run forever.",
+    "ar": "حلقة `while` تكرر جسمها طالما الشرط صحيح. يجب تحديث شيء ما بداخلها وإلا فقد تعمل إلى الأبد."
+  },
+  "loops_for": {
+    "en": "A `for` loop iterates over a known sequence (like `range(n)` or a list), running the body once per item — no risk of infinite looping.",
+    "ar": "حلقة `for` تكرر التنفيذ على تسلسل معروف (مثل `range(n)` أو قائمة)، وتُشغّل الجسم مرة لكل عنصر — بدون خطر التكرار اللانهائي."
+  },
+  "nested_loops": {
+    "en": "A loop inside another loop. If the outer runs n times and the inner runs n times each, the inner body executes n*n times total.",
+    "ar": "حلقة داخل حلقة أخرى. إذا كانت الخارجية تعمل n مرة والداخلية n مرة لكل تكرار، فإن جسم الحلقة الداخلية يُنفذ n*n مرة إجمالاً."
+  },
+  "functions": {
+    "en": "A function packages reusable logic under one name with `def`. Call it wherever you need that logic instead of copy-pasting code.",
+    "ar": "الدالة تُغلّف منطقاً قابلاً لإعادة الاستخدام تحت اسم واحد باستخدام `def`. استدعها أينما تحتاج ذلك المنطق بدلاً من نسخ الكود."
+  },
+  "parameters": {
+    "en": "Parameters are the named inputs a function accepts, e.g. `def greet(name):`. Arguments are the actual values passed in at call time.",
+    "ar": "المعاملات (parameters) هي المدخلات المسماة التي تقبلها الدالة، مثل `def greet(name):`. والوسائط (arguments) هي القيم الفعلية الممررة عند الاستدعاء."
+  },
+  "return_values": {
+    "en": "`return` sends a value back out of a function to whoever called it, so the result can be stored or used elsewhere.",
+    "ar": "`return` تُعيد قيمة من الدالة إلى الجهة التي استدعتها، بحيث يمكن تخزين النتيجة أو استخدامها في مكان آخر."
+  },
+  "scope": {
+    "en": "Scope determines where a variable is visible. Variables created inside a function are local and disappear when the function ends.",
+    "ar": "النطاق (scope) يحدد أين يكون المتغير مرئياً. المتغيرات المُنشأة داخل دالة تكون محلية وتختفي عند انتهاء الدالة."
+  },
+  "recursion": {
+    "en": "A recursive function calls itself on a smaller version of the problem, and must have a base case to stop, or it recurses forever.",
+    "ar": "الدالة العودية (recursion) تستدعي نفسها على نسخة أصغر من المشكلة، ويجب أن تملك حالة أساس (base case) لتتوقف، وإلا استمرت للأبد."
+  },
+  "strings": {
+    "en": "A string is a sequence of characters like \"hello\". You can index, slice, and concatenate strings much like lists.",
+    "ar": "السلسلة النصية (string) هي تسلسل من الأحرف مثل \"hello\". يمكن فهرستها وتقطيعها ودمجها تماماً كالقوائم."
+  },
+  "lists": {
+    "en": "A list is an ordered, changeable collection, e.g. `[1, 2, 3]`. Access items by index starting at 0: `my_list[0]` is the first item.",
+    "ar": "القائمة (list) هي مجموعة مرتبة وقابلة للتعديل، مثل `[1, 2, 3]`. يتم الوصول للعناصر بالفهرس بدءاً من 0: `my_list[0]` هو العنصر الأول."
+  },
+  "list_methods": {
+    "en": "Lists have built-in methods like `.append()`, `.pop()`, `.sort()` that add, remove, or reorder elements in place.",
+    "ar": "تمتلك القوائم دوالاً مدمجة مثل `.append()` و`.pop()` و`.sort()` تضيف أو تحذف أو تعيد ترتيب العناصر مباشرة."
+  },
+  "dicts": {
+    "en": "A dictionary stores key-value pairs, e.g. `{'name': 'Yusuf'}`. Unlike a list's numeric index, you look values up by key.",
+    "ar": "القاموس (dictionary) يخزن أزواج مفتاح-قيمة، مثل `{'name': 'Yusuf'}`. على عكس فهرس القائمة الرقمي، تبحث عن القيم بالمفتاح."
+  },
+  "sets": {
+    "en": "A set is an unordered collection of unique values — duplicates are automatically removed, useful for membership checks.",
+    "ar": "المجموعة (set) هي تجميعة غير مرتبة من قيم فريدة — يتم حذف المكررات تلقائياً، وهي مفيدة للتحقق من العضوية."
+  },
+  "tuples": {
+    "en": "A tuple is like a list but immutable — once created, its contents can't change, which makes it safe to use as a fixed record.",
+    "ar": "الصف (tuple) يشبه القائمة لكنه غير قابل للتعديل — بمجرد إنشائه لا يمكن تغيير محتواه، مما يجعله آمناً كسجل ثابت."
+  },
+  "2d_lists": {
+    "en": "A 2D list is a list of lists, e.g. a grid: `grid[row][col]`. Nested loops are the natural way to visit every cell.",
+    "ar": "القائمة ثنائية الأبعاد هي قائمة من القوائم، مثل شبكة: `grid[row][col]`. الحلقات المتداخلة هي الطريقة الطبيعية لزيارة كل خلية."
+  },
+  "sorting": {
+    "en": "A sorting algorithm rearranges a list into a defined order (ascending/descending), e.g. bubble sort, merge sort, quicksort.",
+    "ar": "خوارزمية الترتيب (sorting) تعيد ترتيب قائمة حسب نظام محدد (تصاعدي/تنازلي)، مثل الفقاعي والدمج والسريع."
+  },
+  "searching": {
+    "en": "A searching algorithm finds whether/where a target exists in a collection, e.g. linear search (check each item) or binary search (halve the range each step, needs sorted data).",
+    "ar": "خوارزمية البحث تحدد ما إذا كان الهدف موجوداً في مجموعة وأينه، مثل البحث الخطي (فحص كل عنصر) أو البحث الثنائي (تنصيف النطاق في كل خطوة، يتطلب بيانات مرتبة)."
+  },
+  "complexity": {
+    "en": "Big-O notation describes how an algorithm's runtime grows with input size n, e.g. O(n) for a single loop, O(n^2) for nested loops.",
+    "ar": "ترميز Big-O يصف كيف ينمو وقت تشغيل الخوارزمية مع حجم المدخلات n، مثل O(n) لحلقة واحدة وO(n^2) للحلقات المتداخلة."
+  },
+  "recursion_complexity": {
+    "en": "Recursive complexity is analyzed by counting calls and work per call — e.g. naive recursive Fibonacci is O(2^n) because calls branch exponentially.",
+    "ar": "يُحلَّل تعقيد العودية بحساب عدد الاستدعاءات والعمل في كل استدعاء — مثلاً متتالية فيبوناتشي العودية الساذجة تكون O(2^n) لأن الاستدعاءات تتفرع بشكل أُسي."
+  },
+  "classes": {
+    "en": "A class is a blueprint for creating objects, bundling data (attributes) and behavior (methods) together with `class` and `def`.",
+    "ar": "الصنف (class) هو مخطط لإنشاء الكائنات، يجمع البيانات (الخصائص) والسلوك (الدوال) معاً باستخدام `class` و`def`."
+  },
+  "objects": {
+    "en": "An object is a specific instance of a class, created by calling the class like a function, e.g. `dog = Dog('Rex')`.",
+    "ar": "الكائن (object) هو نسخة محددة من صنف، يُنشأ باستدعاء الصنف كأنه دالة، مثل `dog = Dog('Rex')`."
+  },
+  "methods": {
+    "en": "A method is a function defined inside a class that operates on an object's data, called as `object.method()`.",
+    "ar": "الدالة (method) هي دالة مُعرَّفة داخل صنف وتعمل على بيانات الكائن، وتُستدعى بصيغة `object.method()`."
+  },
+  "inheritance": {
+    "en": "Inheritance lets a new class reuse and extend an existing class's attributes and methods, e.g. `class Puppy(Dog):`.",
+    "ar": "الوراثة (inheritance) تتيح لصنف جديد إعادة استخدام وتوسيع خصائص ودوال صنف موجود، مثل `class Puppy(Dog):`."
+  },
+  "exceptions": {
+    "en": "`try`/`except` catches errors at runtime so a program can handle problems gracefully instead of crashing.",
+    "ar": "`try`/`except` تلتقط الأخطاء أثناء التشغيل بحيث يمكن للبرنامج معالجة المشاكل بسلاسة بدلاً من التعطل."
+  },
+  "file_io": {
+    "en": "File I/O reads/writes data to disk with `open()`, usually wrapped in `try`/`except` since files can be missing or locked.",
+    "ar": "إدخال/إخراج الملفات يقرأ ويكتب البيانات على القرص باستخدام `open()`، وعادة يُغلَّف بـ `try`/`except` لأن الملفات قد تكون مفقودة أو مقفلة."
+  }
+}

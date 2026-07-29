@@ -1,0 +1,128 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "concept": "variables",
+      "prompt": "What does the line `x = 5` do?",
+      "choices": [
+        "Compares x to 5",
+        "Creates a variable named x and stores the value 5 in it",
+        "Deletes the variable x",
+        "Checks if x equals 5"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2",
+      "concept": "boolean_logic",
+      "prompt": "What does `True and False` evaluate to?",
+      "choices": ["True", "False", "None", "Error"],
+      "answer": 1
+    },
+    {
+      "id": "q3",
+      "concept": "conditionals",
+      "prompt": "In `if x > 5: print('big') else: print('small')`, what prints when x = 3?",
+      "choices": ["big", "small", "nothing", "an error"],
+      "answer": 1
+    },
+    {
+      "id": "q4",
+      "concept": "loops_for",
+      "prompt": "How many times does `for i in range(4):` run its body?",
+      "choices": ["3", "4", "5", "infinite"],
+      "answer": 1
+    },
+    {
+      "id": "q5",
+      "concept": "loops_while",
+      "prompt": "What is the main risk of a `while` loop compared to a `for` loop?",
+      "choices": [
+        "It can't use variables",
+        "It may never terminate if the condition never becomes false",
+        "It only works on lists",
+        "It runs exactly once"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q6",
+      "concept": "nested_loops",
+      "prompt": "A loop inside another loop that each run n times overall runs the inner body how many times?",
+      "choices": ["n", "2n", "n squared (n*n)", "n minus 1"],
+      "answer": 2
+    },
+    {
+      "id": "q7",
+      "concept": "functions",
+      "prompt": "Why do we write functions instead of repeating code?",
+      "choices": [
+        "Functions make code run faster automatically",
+        "To reuse logic under one name and avoid duplication",
+        "Python requires at least one function per file",
+        "Functions remove the need for variables"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q8",
+      "concept": "parameters",
+      "prompt": "In `def greet(name): print(name)`, what is `name`?",
+      "choices": [
+        "A global variable",
+        "A parameter that receives the value passed into the function",
+        "A return value",
+        "A built-in keyword"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q9",
+      "concept": "recursion",
+      "prompt": "What must every correct recursive function have to avoid infinite recursion?",
+      "choices": [
+        "A while loop",
+        "A base case that stops the recursive calls",
+        "A global variable",
+        "At least two parameters"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q10",
+      "concept": "lists",
+      "prompt": "What does `my_list[0]` access?",
+      "choices": [
+        "The last element",
+        "The first element",
+        "The length of the list",
+        "An empty list"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q11",
+      "concept": "dicts",
+      "prompt": "What is a key difference between a dictionary and a list?",
+      "choices": [
+        "Dictionaries store key-value pairs; lists store ordered values by index",
+        "Dictionaries can only store numbers",
+        "Lists cannot store strings",
+        "Dictionaries cannot be changed after creation"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q12",
+      "concept": "sorting",
+      "prompt": "What does a sorting algorithm do?",
+      "choices": [
+        "Removes duplicates from a list",
+        "Arranges elements of a list into a defined order (e.g. ascending)",
+        "Searches for one element in a list",
+        "Converts a list into a dictionary"
+      ],
+      "answer": 1
+    }
+  ]
+}
