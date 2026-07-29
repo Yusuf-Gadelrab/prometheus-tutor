@@ -69,6 +69,15 @@ class TestStaticPage(unittest.TestCase):
         self.assertIn("<svg", html)             # lion mark inlined
         self.assertIn("العربية", html)          # bilingual toggle present
 
+    def test_index_supports_deep_link_boot_params(self):
+        status, ctype, html = request("GET", "/")
+        self.assertEqual(status, 200)
+        self.assertIn("URLSearchParams(location.search)", html)
+        self.assertIn("boot.get('lang')==='ar'", html)
+        self.assertIn("boot.get('concept')", html)
+        # a deep-linked concept must be validated against the graph before use
+        self.assertIn("graphData.nodes.some(n=>n.id===deep)", html)
+
     def test_unknown_route_404(self):
         status, body = get_json("/api/nope")
         self.assertEqual(status, 404)

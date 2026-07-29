@@ -52,7 +52,7 @@ That observation is also the subject of two papers I co-authored at Dr. Ethel Ts
 
 I'm solo on this, so it's all "I" below even though Devpost calls the field "How we built it."
 
-The whole thing is stdlib Python: `http.server` for the web app, no pip install, no npm, no build step, no database. `graph_engine.py` is the part that has to be provably correct on its own, it loads `graph.json` (31 nodes, prereq edges), builds a dependents map, computes topo levels for a cycle check and for layout, runs the BFS state propagation, computes the prerequisite chain for retrieval, and produces the sorted remediation path. It has its own unit tests and zero knowledge of Ollama. The project has 89 tests total, run with `python3 -m unittest discover -v`.
+The whole thing is stdlib Python: `http.server` for the web app, no pip install, no npm, no build step, no database. `graph_engine.py` is the part that has to be provably correct on its own, it loads `graph.json` (31 nodes, prereq edges), builds a dependents map, computes topo levels for a cycle check and for layout, runs the BFS state propagation, computes the prerequisite chain for retrieval, and produces the sorted remediation path. It has its own unit tests and zero knowledge of Ollama. The project has 90 tests total, run with `python3 -m unittest discover -v`.
 
 `explainer.py` is the RAG layer. `build_context()` pulls the prerequisite chain for a concept and splits it into solid vs. weak based on current quiz state, then `build_prompt()` turns that into a deliberately short instruction for the model, because a long one makes qwen3 ruminate instead of answer. Generation goes straight to the Ollama HTTP API at `localhost:11434` with `qwen3-fast` (Qwen3-30B-A3B MoE) using `/api/chat` with `think: true`, never through `ollama run` as a subprocess, so stdout capture quirks never enter the picture. Successful generations and practice questions are memoised in-process per concept, language, and shaky-set, which is what the `--warm` warm-up path fills before a demo.
 
@@ -108,7 +108,7 @@ python, ollama, qwen3, http.server, svg, rag, knowledge-graph, javascript, html,
 ## Try it out / run instructions
 
 ```bash
-git clone <this repo> && cd prometheus-tutor
+git clone https://github.com/Yusuf-Gadelrab/prometheus-tutor.git && cd prometheus-tutor
 
 # web app (tries Ollama automatically, falls back if unreachable)
 python3 server.py
@@ -128,7 +128,7 @@ python3 tutor.py quiz                # take the diagnostic yourself
 python3 tutor.py explain recursion --lang ar
 python3 tutor.py warm functions recursion lists --langs en ar
 
-# tests (89 passing)
+# tests (90 passing)
 python3 -m unittest discover -v
 ```
 

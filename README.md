@@ -16,15 +16,21 @@ Runs with Wi-Fi off.
 
 ---
 
+![Adaptive CS Tutor](assets/cover.png)
+
+---
+
 ## Run it
 
 ```bash
-git clone <this repo> && cd prometheus-tutor
+git clone https://github.com/Yusuf-Gadelrab/prometheus-tutor.git
+cd prometheus-tutor
 python3 tutor.py doctor          # 5s sanity check: graph, DAG, model reachability
 python3 server.py                # open http://localhost:8123
 ```
 
-That is the whole install. Python 3.9+ is the only requirement.
+That is the whole install. Python 3.9+ is the only requirement. There is no
+`requirements.txt` because there is nothing to install.
 
 Offline mode, guaranteed no network calls:
 
@@ -38,6 +44,28 @@ For a **live demo**, pre-warm first (see [Latency](#latency)):
 python3 server.py --warm functions recursion lists --warm-langs en ar
 # wait for "warm-up complete" in the terminal, then record
 ```
+
+### Deep links
+
+The page reads two boot parameters, so any state worth showing someone is a URL:
+
+| URL | Lands on |
+|---|---|
+| `localhost:8123/` | English, current session state restored |
+| `localhost:8123/?lang=ar` | Arabic, RTL, from first paint |
+| `localhost:8123/?concept=recursion` | explanation panel already open on a concept |
+| `localhost:8123/?lang=ar&concept=recursion` | both |
+
+An unknown `concept` id is ignored rather than trusted.
+
+---
+
+## Screenshots
+
+|  |  |
+|---|---|
+| ![Curriculum map](assets/screenshots/01-curriculum-map.png) **The 31-concept prerequisite DAG**, depth 7, before any diagnostic. | ![Propagation](assets/screenshots/02-diagnosed-propagation.png) **Two wrong answers, 19 concepts implicated.** Amber is shaky, crimson is at risk, propagated through the graph. |
+| ![Explanation](assets/screenshots/03-graph-augmented-explanation.png) **Graph-augmented retrieval.** The retrieved context is the real prerequisite chain, printed under the explanation. | ![Arabic](assets/screenshots/04-arabic-rtl.png) **One toggle, full Arabic RTL.** Code identifiers and syntax stay in English, which is the finding from paper 1. |
 
 ### What to click
 
@@ -88,7 +116,7 @@ re-check, and the re-propagation after the student proves the concept.
 python3 -m unittest discover -v
 ```
 
-89 tests, no network required, all pass with Ollama stopped. The Ollama call is
+90 tests, no network required, all pass with Ollama stopped. The Ollama call is
 monkeypatched in the explainer tests and the server tests boot a real
 `ThreadingHTTPServer` on a random port in forced-offline mode.
 
@@ -217,7 +245,7 @@ served is the text the model generated.
 | `explainer.py` | retrieval, prompts, Ollama HTTP calls, fallbacks, caching |
 | `server.py` | stdlib HTTP server + the single-page UI |
 | `tutor.py` | CLI: doctor, demo, quiz, explain, warm |
-| `test_*.py` | 89 tests, no network needed |
+| `test_*.py` | 90 tests, no network needed |
 | `assets/lion-mark.svg` | DHAHAB lion mark |
 | `VIDEO-SCRIPT.md` | 2-minute demo video shot list and narration |
 | `SUBMISSION.md` | Devpost submission copy |

@@ -466,9 +466,13 @@ async function loadAll(){
   graphData=g; quizData=q;
   llmLive = st.ollama.reachable && st.ollama.model_present && !st.no_llm_forced;
   g.nodes.forEach(n=>states[n.id]='ok');
+  const boot=new URLSearchParams(location.search);
+  if(boot.get('lang')==='ar') lang='ar';
   renderQuiz();
   if(sess.shaky && sess.shaky.length){ applyDiagnosis(sess); } else { renderGraph(); }
   applyLang();
+  const deep=boot.get('concept');
+  if(deep && graphData.nodes.some(n=>n.id===deep)) explainNode(deep);
 }
 
 function renderStats(){
