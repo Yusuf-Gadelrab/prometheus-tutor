@@ -1,3 +1,23 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+credentials.json
+secrets.json
+
+# Local state / build artifacts — not source
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+.dira-cache.json
