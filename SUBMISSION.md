@@ -30,7 +30,7 @@ Adaptive CS Tutor takes a 12-question intro-CS diagnostic, then walks a hand-aut
 
 I'm a CS tutor at SJSU (Coding Warriors + the CS Dept) and I run CS programs at Yerba Buena High School, which is ELL-heavy. The same pattern shows up constantly: a student misses a question about recursion, and the actual gap is functions, or scope, or conditionals three concepts back. Reteaching recursion doesn't fix that. You have to find the concept underneath the concept.
 
-That observation is also the subject of two papers I co-authored at Dr. Ethel Tshukudu's CS Education Research Lab at SJSU for SIGCSE TS 2026: "Exploring Bilingual Coding for Inclusive CS Learning" and "Adaptive Curriculum Maps: Graph-Augmented Retrieval-Oriented LLMs for Education" (poster), an IRB-approved mixed-methods study with 60 participants. This hackathon was the excuse to actually build the system the papers describe instead of just writing about it.
+That observation connects to a paper I co-authored (7th of 8 authors) at Dr. Ethel Tshukudu's CS Education Research Lab at SJSU for SIGCSE TS 2026: "Exploring Bilingual Coding for Inclusive Computer Science Learning," an IRB-approved mixed-methods study with 60 participants. This hackathon was the excuse to actually build a tutor around that finding, and to design the prerequisite-graph retrieval layer myself.
 
 ---
 
@@ -74,7 +74,7 @@ The whole thing is stdlib Python: `http.server` for the web app, no pip install,
 
 ## Accomplishments that I'm proud of
 
-- The BFS propagation and topological remediation ordering are small functions, but they're the actual mechanic from the SIGCSE paper turned into working code, not a mockup of it. On the 31-concept, depth-7 DAG, a simulated student who misses functions and lists shows 2 shaky and 17 at risk out of 31 concepts, and one root-cause lesson on functions alone clears 9 concepts at once, exactly the reteach-the-symptom problem the tool exists to fix.
+- The BFS propagation and topological remediation ordering are small functions, but they're a real working mechanic I designed for this tutor, not a mockup of one. On the 31-concept, depth-7 DAG, a simulated student who misses functions and lists shows 2 shaky and 17 at risk out of 31 concepts, and one root-cause lesson on functions alone clears 9 concepts at once, exactly the reteach-the-symptom problem the tool exists to fix.
 - Retrieval that is structurally grounded in a real curriculum graph instead of a vector database, and the UI shows the retrieved chain so the "why did it explain it this way" question has a visible answer.
 - The offline fallback isn't a stub, `--no-llm` produces a fully functional demo with canned bilingual text, a working question bank, and the entire graph mechanic intact. Nothing about the core product depends on the network being up.
 - The warm-up cache turns a 12-to-30-second cold generation into a 15-millisecond served response, measured, without faking anything: the served text is the same generation, just pre-computed on a background thread before the demo starts.
@@ -138,7 +138,6 @@ Zero dependencies to install. Optional: Ollama running locally with `qwen3-fast`
 
 ## Research citations
 
-1. Exploring Bilingual Coding for Inclusive CS Learning. SIGCSE TS 2026. DOI: [10.1145/3770761.3777339](https://doi.org/10.1145/3770761.3777339)
-2. Adaptive Curriculum Maps: Graph-Augmented Retrieval-Oriented LLMs for Education (poster). SIGCSE TS 2026.
+1. Exploring Bilingual Coding for Inclusive Computer Science Learning. SIGCSE TS 2026. DOI: [10.1145/3770761.3777339](https://doi.org/10.1145/3770761.3777339) — Tshukudu, Shah, Kieu, Deeb, Venkateswaran, Ghai, **Gadelrab (7th of 8)**, Hada.
 
-Both from Dr. Ethel Tshukudu's CS Education Research Lab at San Jose State University. IRB-approved mixed-methods study, 60 participants.
+From Dr. Ethel Tshukudu's CS Education Research Lab at San Jose State University. IRB-approved mixed-methods study, 60 participants.

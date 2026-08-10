@@ -40,7 +40,7 @@ def header(text):
 
 def banner():
     print()
-    print(f"{GOLD}  ADAPTIVE CS TUTOR{OFF}  {DIM}DHAHAB . applied SIGCSE TS 2026 research{OFF}")
+    print(f"{GOLD}  ADAPTIVE CS TUTOR{OFF}  {DIM}DHAHAB . applied CS-education research{OFF}")
     print(f"{DIM}  prerequisite-graph diagnostics + local qwen3-fast, $0 stack{OFF}")
 
 
@@ -151,7 +151,7 @@ def cmd_demo(args):
     print()
     print_states(nodes, states)
 
-    header("3. adaptive curriculum map")
+    header("3. adaptive learning path")
     print(f"  {DIM}topological order - root causes before the symptoms they cause{OFF}")
     print()
     path = ge.learning_path(nodes, states, levels)

@@ -2,9 +2,9 @@
 Graph-augmented retrieval (RAG) explainer.
 
 Retrieval is NOT embedding similarity — it is the concept's own prerequisite
-chain, pulled straight out of the curriculum DAG. That is the whole thesis of
-the "Adaptive Curriculum Maps" paper: the right context for explaining X is
-what the learner already knows on the path to X.
+chain, pulled straight out of the curriculum DAG. That is the whole design
+idea behind this tutor: the right context for explaining X is what the
+learner already knows on the path to X.
 
 Generation is local qwen3-fast via the Ollama HTTP API. If Ollama is not
 running, every function degrades to a canned bilingual explanation and the

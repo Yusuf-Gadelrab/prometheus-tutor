@@ -382,9 +382,9 @@ INDEX_HTML = r"""<!doctype html>
 </main>
 
 <footer>
-  <span id="foot1">Built on two SIGCSE TS 2026 papers:</span>
+  <span id="foot1">Built on peer-reviewed SIGCSE TS 2026 research:</span>
   <a href="https://doi.org/10.1145/3770761.3777339">10.1145/3770761.3777339</a> &middot;
-  <span id="foot2">Adaptive Curriculum Maps (poster). 100% local, $0 stack - stdlib Python + Ollama qwen3-fast.</span>
+  <span id="foot2">100% local, $0 stack - stdlib Python + Ollama qwen3-fast.</span>
 </footer>
 
 <script>

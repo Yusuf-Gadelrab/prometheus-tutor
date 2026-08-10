@@ -147,7 +147,9 @@ def score_quiz(quiz_questions, answers):
 
 # --------------------------------------------------------------------------
 # Adaptive curriculum map: turn a state map into an ordered plan of attack.
-# This is the mechanic from "Adaptive Curriculum Maps" (SIGCSE TS 2026).
+# This ordering mechanic is this project's own design: a topological pass
+# over the prerequisite DAG that surfaces root causes before the symptoms
+# they cause.
 # --------------------------------------------------------------------------
 
 def learning_path(nodes, states, levels=None):

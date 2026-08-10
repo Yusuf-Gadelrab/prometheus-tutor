@@ -3,11 +3,13 @@
 A prerequisite graph finds the root cause of a student's confusion. A local model
 then explains it using only what that student already knows, in English or Arabic.
 
-Built from two co-authored SIGCSE TS 2026 papers out of Dr. Ethel Tshukudu's CS
-Education Research Lab at San Jose State:
+The bilingual half is built on a co-authored SIGCSE TS 2026 paper out of Dr.
+Ethel Tshukudu's CS Education Research Lab at San Jose State (7th of 8 authors):
 
-- *Exploring Bilingual Coding for Inclusive CS Learning* - DOI [10.1145/3770761.3777339](https://doi.org/10.1145/3770761.3777339)
-- *Adaptive Curriculum Maps: Graph-Augmented Retrieval-Oriented LLMs for Education* (poster)
+- *Exploring Bilingual Coding for Inclusive Computer Science Learning* - DOI [10.1145/3770761.3777339](https://doi.org/10.1145/3770761.3777339)
+
+The prerequisite-graph retrieval design is my own work for this repo, not a
+published result.
 
 100% local, $0 stack. Python standard library only, no `pip install`, no npm, no
 build step, no database, no cloud API, no keys. Ollama is optional: with it off,
@@ -65,7 +67,7 @@ An unknown `concept` id is ignored rather than trusted.
 |  |  |
 |---|---|
 | ![Curriculum map](assets/screenshots/01-curriculum-map.png) **The 31-concept prerequisite DAG**, depth 7, before any diagnostic. | ![Propagation](assets/screenshots/02-diagnosed-propagation.png) **Two wrong answers, 19 concepts implicated.** Amber is shaky, crimson is at risk, propagated through the graph. |
-| ![Explanation](assets/screenshots/03-graph-augmented-explanation.png) **Graph-augmented retrieval.** The retrieved context is the real prerequisite chain, printed under the explanation. | ![Arabic](assets/screenshots/04-arabic-rtl.png) **One toggle, full Arabic RTL.** Code identifiers and syntax stay in English, which is the finding from paper 1. |
+| ![Explanation](assets/screenshots/03-graph-augmented-explanation.png) **Graph-augmented retrieval.** The retrieved context is the real prerequisite chain, printed under the explanation. | ![Arabic](assets/screenshots/04-arabic-rtl.png) **One toggle, full Arabic RTL.** Code identifiers and syntax stay in English, which is the finding from the bilingual-coding paper. |
 
 ### What to click
 
@@ -85,8 +87,8 @@ An unknown `concept` id is ignored rather than trusted.
    the concept plus its downstream cluster clears at once.
 6. Hit **العربية** in the header. The entire UI flips to Arabic with RTL layout
    and the explanation is regenerated in Arabic, with code identifiers, keywords
-   and syntax left in English. That last detail is the finding from paper 1, not
-   a styling choice.
+   and syntax left in English. That last detail is the finding from the
+   bilingual-coding paper, not a styling choice.
 
 ---
 
@@ -262,5 +264,5 @@ TUTOR_MODEL=qwen3-fast               # any local model with a chat endpoint
 ---
 
 Solo entry for the Prometheus July AI Challenge by Yusuf Gadelrab, San Jose State
-University. The research is real and published. The tool is what the research
-looks like when it runs.
+University. The bilingual finding is real and published. The graph engine built
+on top of it is mine.
