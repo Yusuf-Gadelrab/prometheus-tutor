@@ -3,8 +3,8 @@
 A prerequisite graph finds the root cause of a student's confusion. A local model
 then explains it using only what that student already knows, in English or Arabic.
 
-The bilingual half is built on a co-authored SIGCSE TS 2026 paper out of Dr.
-Ethel Tshukudu's CS Education Research Lab at San Jose State (7th of 8 authors):
+The bilingual half is built on a co-authored SIGCSE TS 2026 poster out of Dr.
+Ethel Tshukudu's CS Education Research Lab at San Jose State (7th author):
 
 - *Exploring Bilingual Coding for Inclusive Computer Science Learning* - DOI [10.1145/3770761.3777339](https://doi.org/10.1145/3770761.3777339)
 
